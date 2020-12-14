@@ -23,6 +23,12 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     super.add(index, ne);
     return this.get(index) == ne;
   }
+  public T set(int index, T value) {
+    T ans = get(index);
+    super.remove(index);
+    super.add(index, value);
+    return ans;
+  }
 
 
 
