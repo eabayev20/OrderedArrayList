@@ -31,9 +31,15 @@ public class NoNullArrayList,T> extends ArrayList<T> {
     return temp;
   }
 
-    
+  public NoNullArrayList() {
+    super();
+  }
 
-
-
+  public NoNullArrayList(T startingCapacity) {
+    super();
+    if (startingCapacity == null) {
+      throw new IllegalArgumentException("Null, Error");
+    }
+  }
 
 }
