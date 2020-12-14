@@ -22,7 +22,18 @@ public class NoNullArrayList,T> extends ArrayList<T> {
     return true;
   }
 
-  
+  public T set (int index, T element) {
+    if (element == null) {
+      throw new IllegalArgumentException ("Null, Error");
+    }
+    T temp = element;
+    super.add(index, element);
+    return temp;
+  }
+
+    
+
+
 
 
 }
