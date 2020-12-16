@@ -2,8 +2,8 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   public OrderedArrayList() {
     super();
   }
-  public OrderedArrayList (int startingCapacity) {
-    super(startingCapacity);
+  public OrderedArrayList (T startingCapacity) {
+    super( startingCapacity);
   }
   public int findIndex(T ne) {
     for (int i = 0; i < size(); i++) {

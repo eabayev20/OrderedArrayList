@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class NoNullArrayList,T> extends ArrayList<T> {
+public class NoNullArrayList<T> extends ArrayList<T> {
 
   public void add(int index, T element) {
     try {
@@ -16,7 +16,7 @@ public class NoNullArrayList,T> extends ArrayList<T> {
 
   public boolean add(T element) {
     if (element == null) {
-      throw new IllegalArgumentException("Null, Error")
+      throw new IllegalArgumentException("Null, Error");
     }
     super.add(element);
     return true;
